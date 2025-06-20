@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos base */
+body {
+  @apply bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Input fields */
+input, textarea, select {
+  @apply rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary;
+}
+
+/* Botones */
+button {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Loader (cargando) */
+.loader {
+  border-top-color: #3490dc;
+  animation: spin 1s ease-in-out infinite;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 6px;
+  height: 48px;
+  width: 48px;
+  margin: auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
